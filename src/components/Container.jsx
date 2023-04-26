@@ -1,5 +1,7 @@
 import { useState } from "react"
+import "./container.css"
 import MenuButton from "./MenuButton"
+import Content from "./Content";
 
 const Container = () => {
 
@@ -15,16 +17,14 @@ const Container = () => {
     return (
         <div className="container">
             <MenuButton title='Горный велосипед' selected={selected} type="m" onClick={() => toggle('m')}></MenuButton>
-            <div className={selected === 'm' ? 'content show mob' : 'content'}>
-                MALE <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
-            </div>
+            {/* For mobile version */}
+            <Content cls={selected === 'm' ? 'content show mob' : 'content'} type='m'></Content>
+
             <MenuButton title='Женский велосипед' selected={selected} type="w" onClick={() => toggle('w')}></MenuButton>
-            <div className={selected === 'w' ? 'content show' : 'content'}>
-                FEMALE <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
-            </div>
-            <div className={selected === 'm' ? 'content show desk' : 'content'}>
-                MALE <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
-            </div>
+            <Content cls={selected === 'w' ? 'content show' : 'content'} type="w"></Content>
+
+            {/* For a desktop version */}
+            <Content cls={selected === 'm' ? 'content show desk' : 'content'} type="m"></Content>
         </div>
     )
 }
