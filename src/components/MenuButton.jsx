@@ -1,14 +1,14 @@
 const MenuButton = (props) => {
-    let sign = ' + ';
+    let arrow = 'arrow-up';
     let cls = 'menu-button unused';
     if (props.type === props.selected) {
-        sign = '-';
+        arrow = 'arrow-down';
         cls = 'menu-button';
     }
 
     return (
         <button className={cls} onClick={props.onClick}>
-            {props.title} {sign}
+            <span>{props.title}</span> <span className={arrow}></span>
         </button>
     );
 }
