@@ -5,17 +5,28 @@
 }
 
 .content {
-    height: 400px;
+
     background-color: white;
     border-radius: 0px 20px 20px 20px;
     padding: 40px 60px;
     animation: disappear 0.5s;
     visibility: hidden;
+    display: none;
 }
 
 .content.show {
+    height: 400px;
     visibility: visible;
+    display: block;
     animation: appear 0.5s;
+}
+
+.content.show.mob {
+    display: none;
+}
+
+.content.show.desk {
+    display: block;
 }
 
 .menu-button {
@@ -26,6 +37,7 @@
     border: none;
     display: inline-flex;
     justify-content: space-between;
+    width: 290px;
 }
 
 .menu-button.unused {
@@ -41,7 +53,7 @@
 .arrow-up {
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
+    display: none;
     padding: 3px;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
@@ -50,7 +62,7 @@
 .arrow-down {
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
+    display: none;
     padding: 3px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -88,6 +100,18 @@
         font-size: 20px;
     }
 
+    .arrow-down,
+    .arrow-up {
+        display: inline-block;
+    }
+
+    .content.show.mob {
+        display: block;
+    }
+
+    .content.show.desk {
+        display: none;
+    }
 
 }
 

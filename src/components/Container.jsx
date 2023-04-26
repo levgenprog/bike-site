@@ -15,10 +15,15 @@ const Container = () => {
     return (
         <div className="container">
             <MenuButton title='Горный велосипед' selected={selected} type="m" onClick={() => toggle('m')}></MenuButton>
+            <div className={selected === 'm' ? 'content show mob' : 'content'}>
+                MALE <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
+            </div>
             <MenuButton title='Женский велосипед' selected={selected} type="w" onClick={() => toggle('w')}></MenuButton>
-
-            <div className={selected ? 'content show' : 'content'}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
+            <div className={selected === 'w' ? 'content show' : 'content'}>
+                FEMALE <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
+            </div>
+            <div className={selected === 'm' ? 'content show desk' : 'content'}>
+                MALE <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
             </div>
         </div>
     )
