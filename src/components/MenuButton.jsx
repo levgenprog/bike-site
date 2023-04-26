@@ -1,8 +1,14 @@
 const MenuButton = (props) => {
-    let sing = '+';
+    let sign = ' + ';
+    let cls = 'menu-button unused';
+    if (props.type === props.selected) {
+        sign = '-';
+        cls = 'menu-button';
+    }
+
     return (
-        <button className="menu-button ">
-            {props.title} {sing}
+        <button className={cls} onClick={props.onClick}>
+            {props.title} {sign}
         </button>
     );
 }

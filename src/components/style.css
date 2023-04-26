@@ -1,14 +1,21 @@
 .container {
-    width: 846px;
+    width: 50%;
     margin: 0 auto;
     margin-top: 81px;
 }
 
 .content {
-    height: 500px;
+    height: 400px;
     background-color: white;
     border-radius: 0px 20px 20px 20px;
     padding: 40px 60px;
+    animation: disappear 0.5s;
+    visibility: hidden;
+}
+
+.content.show {
+    visibility: visible;
+    animation: appear 0.5s;
 }
 
 .menu-button {
@@ -24,4 +31,32 @@
 .menu-button.unused {
     color: #0C0C0C;
     background: #D9D9D9;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-9999);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-9999);
+    }
 }
