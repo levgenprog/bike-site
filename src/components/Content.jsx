@@ -2,9 +2,11 @@ import "./content.css"
 
 const Content = (props) => {
 
+    let mob = window.innerWidth <= 768 ? 'mob' : '';
+
     const innerContent = {
         'm': {
-            img: require('./images/image1.png'),
+            img: require(`./images/image1${mob}.png`),
             h1: 'Велосипед STELS Navigator 510 HD 26 2022',
             p1: `Данный велосипед c колесами 26 дюймов хорошо подходит высоким подросткам. 
                         Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.`,
