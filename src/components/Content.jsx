@@ -27,8 +27,8 @@ const Content = (props) => {
     return (
         <div className={props.cls}>
             <div className="about">
-                <div className="about-img">
-                    <img src={innerContent[props.type].img} className="img-desk" alt="cyclet" />
+                <div className={"about-img " + props.type}>
+                    {/* <img src={innerContent[props.type].img} className="img-desk" alt="cyclet" /> */}
                 </div>
 
                 <div className="about-desc">

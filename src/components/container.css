@@ -5,7 +5,6 @@
 }
 
 .content {
-
     background-color: white;
     border-radius: 0px 20px 20px 20px;
     padding: 40px 60px;
@@ -15,7 +14,7 @@
 }
 
 .content.show {
-    height: 400px;
+    /* height: 400px; */
     visibility: visible;
     display: block;
     animation: appear 0.5s;
