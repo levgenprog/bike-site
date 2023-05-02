@@ -1,5 +1,4 @@
 const MenuButton = (props) => {
-    let sing = '+';
 
     let cls = 'menu-button unused';
     if (props.type === props.sel) {
@@ -8,7 +7,7 @@ const MenuButton = (props) => {
 
     return (
         <button className={cls} onClick={props.onClick}>
-            {props.title} {sing}
+            <span>{props.title}</span> <span className="arrow-up"></span>
         </button>
     );
 }

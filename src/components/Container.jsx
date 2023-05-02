@@ -1,5 +1,6 @@
 import { useState } from "react"
 import MenuButton from "./MenuButton"
+import Content from "./Content";
 
 const Container = () => {
 
@@ -18,9 +19,7 @@ const Container = () => {
             <MenuButton title='Горный велосипед' sel={selected} onClick={() => toggle('m')} type='m'></MenuButton>
             <MenuButton title='Женский велосипед' sel={selected} onClick={() => toggle('w')} type='w'></MenuButton>
 
-            <div className="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta veniam obcaecati pariatur optio odio provident ipsam quaerat aperiam id, consequuntur aspernatur molestiae distinctio magni omnis debitis unde nulla placeat cumque?
-            </div>
+            <Content></Content>
         </div>
     )
 }
