@@ -38,6 +38,20 @@ hr {
     margin-top: 40px;
 }
 
+.params {
+    margin: 40px 0 0 0;
+}
+
+.params-list {
+    margin: 20px 0 0 -20px;
+    column-count: 2;
+    column-gap: 100px;
+}
+
+.params-list li {
+    margin-top: 16px;
+}
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .about {
         flex-direction: column;

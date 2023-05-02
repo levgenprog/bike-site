@@ -1,4 +1,5 @@
 import "./content.css"
+import List from "./List";
 
 const Content = (props) => {
 
@@ -44,6 +45,8 @@ const Content = (props) => {
 
             </div>
             <hr />
+
+            <List></List>
         </div>
     )
 }
