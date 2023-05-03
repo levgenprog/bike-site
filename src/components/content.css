@@ -60,6 +60,41 @@ hr {
     /* vertical-align: middle; */
 }
 
+.addparam {
+    margin-top: 30px;
+}
+
+.addparam-form {
+    margin-top: 20px;
+}
+
+.addparam-form input {
+    width: 351px;
+
+    align-items: center;
+    padding: 14px 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+}
+
+::placeholder {
+    color: #D9D9D9;
+}
+
+.addparam-form button {
+    width: 128px;
+    height: 50.6px;
+    margin: 24px;
+    text-align: center;
+    padding: 14px 24px;
+    background-color: #3922C5;
+    border-radius: 16px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .about {
         flex-direction: column;
@@ -90,5 +125,20 @@ hr {
 
     .params-list {
         column-count: 1;
+    }
+
+    .addparam-form {
+        margin-top: 15px;
+    }
+
+    .addparam-form input {
+        width: 300px;
+        display: inline;
+    }
+
+    .addparam-form button {
+        width: 336px;
+        height: 50.6px;
+        margin: 24px 0 0 0;
     }
 }
