@@ -46,7 +46,7 @@ const Content = (props) => {
             </div>
             <hr />
 
-            <List></List>
+            <List type={props.type}></List>
         </div>
     )
 }

@@ -45,11 +45,19 @@ hr {
 .params-list {
     margin: 20px 0 0 -20px;
     column-count: 2;
-    column-gap: 100px;
+    /* column-gap: 100px; */
 }
 
 .params-list li {
-    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.params-list.w li {
+    background: url(./images/Vector.png) no-repeat transparent;
+    list-style-type: none;
+    margin-left: -16px;
+    padding-left: 32px;
+    /* vertical-align: middle; */
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -74,5 +82,13 @@ hr {
 
     .about-desc {
         margin: 20px 0 0 0;
+    }
+
+    .params {
+        margin: 30px 0 0 0;
+    }
+
+    .params-list {
+        column-count: 1;
     }
 }
