@@ -1,13 +1,12 @@
 import "./content.css"
 import List from "./List";
+import Okay from "./Okay";
 
 const Content = (props) => {
 
-    let mob = window.innerWidth <= 768 ? 'mob' : '';
 
     const innerContent = {
         'm': {
-            img: require(`./images/image1${mob}.png`),
             h1: 'Велосипед STELS Navigator 510 HD 26 2022',
             p1: `Данный велосипед c колесами 26 дюймов хорошо подходит высоким подросткам. 
                         Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.`,
@@ -16,7 +15,6 @@ const Content = (props) => {
             list: ["Двойной обод", "Алюминиевый сплав", "Колеса диаметром 26 дюймов", "Покрышки 26х1,95"]
         },
         'w': {
-            img: require('./images/image2.png'),
             h1: 'Велосипед SCHWINN Traveler women 2022',
             p1: `Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без
                         проблем его перемещать.`,
@@ -31,7 +29,6 @@ const Content = (props) => {
         <div className={props.cls}>
             <div className="about">
                 <div className={"about-img " + props.type}>
-                    {/* <img src={innerContent[props.type].img} className="img-desk" alt="cyclet" /> */}
                 </div>
 
                 <div className="about-desc">
@@ -49,6 +46,8 @@ const Content = (props) => {
             <hr />
 
             <List type={props.type} lst={innerContent[props.type].list}></List>
+            <Okay></Okay>
+
         </div>
     )
 }

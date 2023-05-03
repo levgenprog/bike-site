@@ -70,7 +70,6 @@ hr {
 
 .addparam-form input {
     width: 351px;
-
     align-items: center;
     padding: 14px 16px;
     background-color: #FFFFFF;
@@ -82,7 +81,13 @@ hr {
     color: #D9D9D9;
 }
 
-.addparam-form button {
+.addparam-form input:focus {
+    outline: none;
+    border: 1px solid #3922C5;
+}
+
+.addparam-form button,
+.okay button {
     width: 128px;
     height: 50.6px;
     margin: 24px;
@@ -93,6 +98,42 @@ hr {
     border: none;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.addparam-form button:hover,
+.okay button:hover {
+    background-color: #2C1A9A;
+}
+
+.addparam-form button:active,
+.okay button:active {
+    background-color: #1F1368;
+}
+
+/* Okay */
+
+.okay {
+    width: 100%;
+    height: 112px;
+    box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.okay-cont {
+    margin-left: 36px;
+    padding-top: 10px;
+}
+
+.okay button {
+    width: 92px;
+}
+
+.okay button.okay-cnsl {
+    background-color: transparent;
+    color: #0C0C0C;
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -140,5 +181,13 @@ hr {
         width: 336px;
         height: 50.6px;
         margin: 24px 0 0 0;
+    }
+
+    .okay-cont {
+        margin-left: 10px;
+    }
+
+    .okay button {
+        width: 120px;
     }
 }
