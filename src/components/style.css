@@ -1,5 +1,5 @@
 .container {
-    width: 50%;
+    width: 846px;
     margin: 0 auto;
     margin-top: 81px;
 }
@@ -35,6 +35,18 @@
     padding: 3px;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
+    display: none;
+}
+
+.arrow-down {
+    border: solid #0C0C0C;
+    border-radius: 2px;
+    font-size: 22px;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: none;
 }
 
 /* Content */
@@ -44,4 +56,17 @@
     background-image: url(../images/image1.png);
     background-repeat: no-repeat;
     margin-left: -60px;
+    flex-shrink: 0;
+}
+
+.about {
+    display: flex;
+}
+
+.about-desc {
+    margin-left: 71px;
+}
+
+.about-desc * {
+    padding: 2%;
 }
